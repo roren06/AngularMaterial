@@ -1,0 +1,65 @@
+
+<nav class="bg-white border-gray-200 dark:bg-gray-900">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <a href="#" class="text-blue-500 hover:text-blue-800">
+        <img src="https://www.hau.edu.ph/images/logo-circle.png" class="h-16" alt="HAU Logo" />
+        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">HAU</span>
+    </a>
+    <button data-collapse-toggle="navbar-solid-bg" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-solid-bg" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+        </svg>
+    </button>
+    <div class="hidden w-full md:block md:w-auto">
+      <ul class="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
+       
+        <li>
+          <a routerLink="/add-book" routerLinkActive="active" [routerLinkActiveOptions]={exact:true}>Add Books</a>
+        </li>
+        <li>
+          <a routerLink="/books-list" routerLinkActive="active">Show Books</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<button mat-button [matMenuTriggerFor]="menu" id="toggle">Menu</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>Romance</button>
+  <button mat-menu-item>Thriller</button>
+  <button mat-menu-item>Horror</button>
+  <button mat-menu-item>Adventure</button>
+</mat-menu>
+
+<h2 id="jairaganda"> Book Limit </h2> 
+<mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+
+<mat-slide-toggle id="slide">Slide me!</mat-slide-toggle>
+
+<h3 id="extended">Extended Fab</h3>
+<div class="example-button-row">
+  <button mat-fab extended color="primary">
+    <mat-icon>favorite</mat-icon>
+    Primary
+  </button>
+  <button mat-fab extended color="accent">
+    <mat-icon>favorite</mat-icon>
+    Accent
+  </button>
+  <button mat-fab extended color="warn">
+    <mat-icon>favorite</mat-icon>
+    Warn
+  </button>
+  <button mat-fab extended disabled>
+    <mat-icon>favorite</mat-icon>
+    Disabled
+  </button>
+  <a mat-fab extended routerLink=".">
+    <mat-icon>favorite</mat-icon>
+    Link
+  </a>
+</div>
+
+<router-outlet></router-outlet>
